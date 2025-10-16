@@ -1,15 +1,8 @@
 import Link from "next/link"
 import ContentWrapper from "./ContentWrapper"
 import Logo from "./Logo"
-import { Button } from "./ui/button"
 import { ArrowRight } from "lucide-react"
-
-const menuItems = [
-    { name: 'Features', href: '#features' },
-    { name: 'Solution', href: '#solution' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Pricing', href: '#pricing' },
-]
+import { menuItems } from "@/constants"
 
 export default function Navbar() {
     return (

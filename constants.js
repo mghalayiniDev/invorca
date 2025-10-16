@@ -1,3 +1,12 @@
+import { FileSpreadsheet, BellRing, BarChart3, ShieldCheck } from "lucide-react"
+
+export const menuItems = [
+    { name: 'Features', href: '#features' },
+    { name: 'Solution', href: '#solution' },
+    { name: 'Testimonials', href: '#testimonials' },
+    { name: 'Pricing', href: '#pricing' },
+]
+
 export const brands = [
     { src: "https://html.tailus.io/blocks/customers/nvidia.svg", alt: "Nvidia Logo", h: 5 },
     { src: "https://html.tailus.io/blocks/customers/column.svg", alt: "Column Logo", h: 4 },
@@ -7,6 +16,35 @@ export const brands = [
     { src: "https://html.tailus.io/blocks/customers/laravel.svg", alt: "Laravel Logo", h: 4 },
     { src: "https://html.tailus.io/blocks/customers/lilly.svg", alt: "Lilly Logo", h: 7 },
     { src: "https://html.tailus.io/blocks/customers/openai.svg", alt: "OpenAI Logo", h: 6 },
+]
+
+export const features = [
+    {
+        icon: FileSpreadsheet,
+        title: "Automated Invoicing",
+        description: "Generate and send invoices automatically in seconds.",
+    },
+    {
+        icon: BellRing,
+        title: "Payment Tracking",
+        description: "Stay notified and track every payment easily.",
+    },
+    {
+        icon: BarChart3,
+        title: "Analytics",
+        description: "View clear insights to grow your business faster.",
+    },
+    {
+        icon: ShieldCheck,
+        title: "Data Security",
+        description: "Your invoices are safely stored and encrypted.",
+    },
+]
+
+export const stats = [
+    { value: "99.9", sign: "%", description: "Uptime guarantee" },
+    { value: "24/7", sign: "", description: "Support available" },
+    { value: "100", sign: "+", description: "Projects completed" },
 ]
 
 export function FeaturesCircleBackground() {

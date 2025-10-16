@@ -1,5 +1,7 @@
-import Features from "@/components/landing/Features";
-import Hero from "@/components/landing/Hero";
+import Content from "@/components/landing/Content"
+import Features from "@/components/landing/Features"
+import Hero from "@/components/landing/Hero"
+import Stats from "@/components/landing/Stats"
 
 export default function Landing() {
     return (
@@ -9,6 +11,12 @@ export default function Landing() {
 
             {/* Features */}
             <Features />
+
+            {/* Content */}
+            <Content />
+
+            {/* Stats */}
+            <Stats />
         </>
     )
 }

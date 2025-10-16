@@ -1,16 +1,19 @@
 import ContentWrapper from "../ContentWrapper"
 import { Card, CardContent } from '@/components/ui/card'
-import { featuredUsers, FeaturesAutomatedReports, FeaturesCircleBackground, FeaturesFingerprintBackground, FeaturesInstantInvocing } from "@/constants"
+import { FeaturesAutomatedReports, FeaturesCircleBackground, FeaturesFingerprintBackground, FeaturesInstantInvocing } from "@/constants"
 import { Shield, Users } from 'lucide-react'
 
 export default function Features() {
     return (
-        <section className="overflow-hidden py-24">
+        <section 
+            className="overflow-hidden py-16"
+            id="#features"    
+        >
             <ContentWrapper>
                 {/* Header */}
-                <div className="max-w-3xl w-full mx-auto md:text-center flex flex-col md:justify-center md:items-center">
+                <div className="max-w-3xl w-full mx-auto text-center flex flex-col justify-center items-center">
                     <span className="text-brand-700 font-[600] md:text-[1.175rem]">Smart Billing</span>
-                    <h2 className="text-balance text-4xl font-[600] lg:text-6xl">The smarter way to manage and send invoices</h2>
+                    <h2 className="text-balance text-4xl font-[600] max-w-md lg:max-w-[100%] lg:text-6xl">The smarter way to manage and send invoices</h2>
                 </div>
                 {/* Features grid */}
                 <div className="pt-20 pb-14">

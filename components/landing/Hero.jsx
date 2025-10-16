@@ -9,8 +9,8 @@ export default function Hero() {
             className="pt-32 pb-18"
         >
               <svg className='absolute inset-0 -z-10 size-full max-md:hidden' width='1440' height='720' viewBox='0 0 1440 720' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                <circle cx='711.819' cy='372.562' r='308.334' stroke='var(--color-gray-200)' strokeOpacity='.5' />
-                <circle cx='782.595' cy='411.166' r='308.334' stroke='var(--color-gray-200)' strokeOpacity='.5' />
+                <circle cx='711.819' cy='372.562' r='308.334' stroke='var(--color-gray-200)' strokeOpacity='.9' />
+                <circle cx='782.595' cy='411.166' r='308.334' stroke='var(--color-gray-200)' strokeOpacity='.9' />
             </svg>
             <ContentWrapper className="overflow-hidden text-center flex flex-col">
                 <Link
@@ -31,7 +31,7 @@ export default function Hero() {
                     </div>
                 </Link>
                 <h1 
-                    className="mx-auto max-w-4xl text-5xl font-semibold md:text-7xl xl:text-[5.25rem] mt-6"
+                    className="mx-auto max-w-2xl lg:max-w-4xl text-5xl font-semibold md:text-7xl xl:text-[5.25rem] mt-6"
                 >
                     Generate Invoices in Seconds Effortlessly
                 </h1>
@@ -52,7 +52,7 @@ export default function Hero() {
                         />
                     </button>
                     <button 
-                        className="text-[0.95rem] border
+                        className="text-[0.95rem] border hover:bg-neutral-100/70
                         rounded-md px-8 py-[12px] font-[600] cursor-pointer max-w-[175px] w-full"
                     >
                         View pricing
