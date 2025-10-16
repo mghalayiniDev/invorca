@@ -1,9 +1,9 @@
 import { stats } from "@/constants";
-import ContentWrapper from "../ContentWrapper";
+import ContentWrapper from "../ContentWrapper"
 
 export default function Stats() {
     return (
-        <section className="py-24">
+        <section className="pt-26 pb-20">
             <ContentWrapper>
                 <img
                     src="/map.svg"
@@ -17,7 +17,7 @@ export default function Stats() {
                                 justify-center ${index !== stats.length - 1 ? 'md:border-r md:pr-7' : ''}`}
                             key={index}
                         >
-                            <span className="font-[700] text-3xl flex items-center gap-3.5">
+                            <span className="font-[700] text-3xl flex items-center gap-1.5">
                                 {stat.value}
                                 <span className="text-xl text-gray-700">{stat.sign}</span>
                             </span>

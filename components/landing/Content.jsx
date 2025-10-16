@@ -12,7 +12,7 @@ export default function Content() {
                 <div className="max-w-3xl w-full mx-auto text-center flex flex-col justify-center items-center mb-20">
                     <h2 className="text-balance text-4xl font-[600] lg:text-6xl max-w-md lg:max-w-[100%]">Streamline Your Invoicing Process Effortlessly</h2>
                       <p
-                        className="mx-auto mt-8 max-w-2xl text-balance text-[1.15rem] leading-[1.8]"
+                        className="mx-auto mt-8 max-w-2xl text-balance leading-[1.8]"
                     >
                         Manage and track invoices with ease. Automate repetitive tasks, stay on top of payments, and keep your business organized.
                     </p>
@@ -29,9 +29,9 @@ export default function Content() {
                         <div className="space-y-3" key={index}>
                             <div className="flex items-center gap-2">
                                 <feature.icon className="size-4" />
-                                <span className="text-sm font-[600]">{feature.title}</span>
+                                <span className="text-[0.915rem] font-[700]">{feature.title}</span>
                             </div>
-                            <p className="text-muted-foreground text-sm font-[500] leading-[1.8]">{feature.description}</p>
+                            <p className="text-muted-foreground text-[0.85rem] font-[500] leading-[1.825]">{feature.description}</p>
                         </div>
                     ))}
                 </div>

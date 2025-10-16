@@ -6,7 +6,7 @@ import { Shield, Users } from 'lucide-react'
 export default function Features() {
     return (
         <section 
-            className="overflow-hidden py-16"
+            className="overflow-hidden pt-23 pb-16"
             id="#features"    
         >
             <ContentWrapper>

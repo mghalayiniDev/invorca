@@ -6,7 +6,7 @@ import Link from "next/link"
 export default function Hero() {
     return (
         <section
-            className="pt-32 pb-18"
+            className="pt-32 pb-18 relative"
         >
               <svg className='absolute inset-0 -z-10 size-full max-md:hidden' width='1440' height='720' viewBox='0 0 1440 720' fill='none' xmlns='http://www.w3.org/2000/svg'>
                 <circle cx='711.819' cy='372.562' r='308.334' stroke='var(--color-gray-200)' strokeOpacity='.9' />
@@ -43,7 +43,7 @@ export default function Hero() {
                 <div className="mt-10 flex flex-col items-center justify-center gap-5 md:flex-row w-full">
                     <button 
                         className="text-[0.95rem] border border-brand-700 bg-brand-700 text-white 
-                        rounded-md px-8 py-[12px] font-[500] cursor-pointer flex items-center gap-3 hover:bg-brand-800 max-w-[175px] w-full"
+                        rounded-md px-8 py-[12px] font-[500] cursor-pointer flex items-center gap-3 hover:bg-brand-800 justify-center max-w-[275px] md:max-w-[175px] w-full"
                     >
                         Get started
                         <ArrowRight 
@@ -53,7 +53,7 @@ export default function Hero() {
                     </button>
                     <button 
                         className="text-[0.95rem] border hover:bg-neutral-100/70
-                        rounded-md px-8 py-[12px] font-[600] cursor-pointer max-w-[175px] w-full"
+                        rounded-md px-8 py-[12px] font-[600] cursor-pointer max-w-[275px] md:max-w-[175px] w-full"
                     >
                         View pricing
                     </button>
