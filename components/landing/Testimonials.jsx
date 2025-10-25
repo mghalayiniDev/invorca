@@ -9,10 +9,10 @@ export default function Testimonials() {
                 {/* Header */}
                 <div className="max-w-3xl w-full mx-auto text-center flex flex-col justify-center items-center mb-20">
                     <h2 className="text-balance text-4xl font-[600] lg:text-6xl max-w-md lg:max-w-[100%]">Build by makers, loved by thousand developers</h2>
-                      <p
+                    <p
                         className="mx-auto mt-8 max-w-2xl text-balance leading-[1.8]"
                     >
-                        Hear from developers around the world who trust our platform to simplify their workflow, save time, and boost productivity every day.
+                        Hear from developers who trust our platform to simplify their workflow and boost productivity every day.
                     </p>
                 </div>
                 {/* Testimonials */}
@@ -20,17 +20,16 @@ export default function Testimonials() {
                     <Card className="grid grid-rows-[auto_1fr] gap-8 md:col-span-2 sm:p-6 lg:row-span-2">
                         <CardHeader>
                             <img
-                                className="h-6 w-fit dark:invert"
-                                src="https://html.tailus.io/blocks/customers/nike.svg"
+                                className="h-8 w-fit"
+                                src="/quote.png"
                                 alt="Nike Logo"
-                                height="24"
+                                height="28"
                                 width="auto"
                             />
                         </CardHeader>
                         <CardContent>
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
                                 <p className="text-xl font-medium">Invorca has transformed the way I manage invoices and billing. Its intuitive dashboard, automation tools, and customizable templates have drastically sped up my workflow. The flexibility to tailor every detail lets me create a seamless experience for my clients. Invorca is truly a game-changer for modern businesses</p>
-
                                 <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                                     <Avatar className="size-12">
                                         <AvatarImage
@@ -75,7 +74,7 @@ export default function Testimonials() {
                             </blockquote>
                         </CardContent>
                     </Card>
-                    <Card>
+                    <Card className="relative">
                         <CardContent className="h-full pt-6">
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
                                 <p>Thanks to Invorca, our team saves hours every week. Automation features and reminders are a real game-changer</p>
@@ -112,7 +111,7 @@ export default function Testimonials() {
                                             width="400"
                                             loading="lazy"
                                         />
-                                        <AvatarFallback>YF</AvatarFallback>
+                                        <AvatarFallback>RA</AvatarFallback>
                                     </Avatar>
                                     <div>
                                         <p className="text-sm font-medium">Rodrigo Aguilar</p>

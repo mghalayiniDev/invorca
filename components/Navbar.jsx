@@ -1,7 +1,7 @@
 import Link from "next/link"
 import ContentWrapper from "./ContentWrapper"
 import Logo from "./Logo"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Menu } from "lucide-react"
 import { menuItems } from "@/constants"
 
 export default function Navbar() {
@@ -22,20 +22,29 @@ export default function Navbar() {
                         ))}
                     </ul>
                 </div>
-                <div className="flex items-stretch gap-9.5">
+                <div className="flex items-stretch gap-6.5 md:gap-9.5">
                     <button 
-                        className="text-[0.835rem] font-[500] cursor-pointer hover:text-gray-700"
+                        className="hidden lg:block text-[0.835rem] font-[500] cursor-pointer hover:text-gray-700"
                     >
                         Sign in
                     </button>
                     <button 
-                        className="text-[0.835rem] border border-brand-700 bg-brand-700 text-white 
+                        className="text-[0.785rem] lg:text-[0.835rem] border border-brand-700 bg-brand-700 text-white 
                         rounded-md px-5 py-[8px] font-[500] cursor-pointer flex items-center gap-3 hover:bg-brand-800"
                     >
-                        Sign up
+                        <span className="lg:hidden">Get started</span>
+                        <span className="hidden lg:block">Sign up</span>
                         <ArrowRight 
                             width={15}
                             height={15}
+                            className="hidden lg:block"
+                        />
+                    </button>
+                    <button>
+                        <Menu 
+                            width={20}
+                            height={20}
+                            className="lg:hidden cursor-pointer"
                         />
                     </button>
                 </div>

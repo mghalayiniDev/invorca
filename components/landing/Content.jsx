@@ -18,15 +18,15 @@ export default function Content() {
                     </p>
                 </div>
                 <img
-                    className="rounded-(--radius) grayscale"
+                    className="rounded-(--radius)"
                     src="/content.webp"
                     alt="team image"
                     loading="lazy"
                 />
                 {/* Features */}
-                <div className="relative mx-auto grid justify-center md:justify-start md:grid-cols-2 gap-x-3 gap-y-6 sm:gap-8 lg:grid-cols-4 mt-16">
+                <div className="relative mx-auto grid justify-center md:justify-start md:grid-cols-2 gap-x-3 gap-y-6 sm:gap-8 lg:grid-cols-4 mt-16 md:max-w-3xl md:mx-auto lg:max-w-full lg:mx-0">
                     {features.map((feature, index) => (
-                        <div className="space-y-3" key={index}>
+                        <div className={`space-y-3 ${index !== features.length-1 ? 'lg:border-r' : ''}`} key={index}>
                             <div className="flex items-center gap-2">
                                 <feature.icon className="size-4" />
                                 <span className="text-[0.915rem] font-[700]">{feature.title}</span>

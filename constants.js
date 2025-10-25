@@ -44,7 +44,148 @@ export const features = [
 export const stats = [
     { value: "99.9", sign: "%", description: "Uptime guarantee" },
     { value: "24/7", sign: "", description: "Support available" },
-    { value: "100", sign: "+", description: "Projects completed" },
+    { value: "5,000", sign: "+", description: "Invoices generated" },
+]
+
+export const plans = [
+    {
+        name: "Free",
+        price: 0,
+        isPro: false,
+        recommended: false,
+        description: "Perfect for individuals who need basic invoicing with limited features",
+        features: [
+            { feature: "Generate 80 invoices/month", included: true },
+            { feature: "Export invoices to PDF & CSV", included: true },
+            { feature: "Advanced Analytics & Reports ", included: true },
+            { feature: "API access", included: false },
+            { feature: "Premium invoice templates", included: false },
+            { feature: "Manual Invoice & Reminder Emails", included: false },
+            { feature: "Priority support", included: false },
+            { feature: "Recurring invoices", included: false },
+            { feature: "Monthly Reports & Insights", included: false },
+            { feature: "Automated reminder emails", included: false },
+        ]
+    },
+    {
+        name: "Pro",
+        price: 30,
+        isPro: true,
+        recommended: true,
+        description: "For freelancers who need unlimited invoices and more features",
+        features: [
+            { feature: "Generate unlimited invoices", included: true },
+            { feature: "Export invoices to PDF & CSV", included: true },
+            { feature: "Advanced Analytics & Reports ", included: true },
+            { feature: "API access", included: true },
+            { feature: "Premium invoice templates", included: true },
+            { feature: "Manual Invoice & Reminder Emails", included: true },
+            { feature: "Priority support", included: true },
+            { feature: "Recurring invoices", included: false },
+            { feature: "Monthly Reports & Insights", included: false },
+            { feature: "Automated reminder emails", included: false }
+        ]
+    },
+    {
+        name: "Business",
+        price: 90,
+        isPro: true,
+        recommended: false,
+        description: "Designed for businesses that require full customization and priority support",
+        features: [
+            { feature: "Generate unlimited invoices", included: true },
+            { feature: "Export invoices to PDF & CSV", included: true },
+            { feature: "Advanced Analytics & Reports ", included: true },
+            { feature: "API access", included: true },
+            { feature: "Premium invoice templates", included: true },
+            { feature: "Manual Invoice & Reminder Emails", included: true },
+            { feature: "Priority support", included: true },
+            { feature: "Recurring invoices", included: true },
+            { feature: "Monthly Reports & Insights", included: true },
+            { feature: "Automated reminder emails", included: true },
+        ]
+    }
+]
+
+export const comparatorFeatures = [
+    {
+        feature: 'Invoices per month',
+        free: "80",
+        pro: "Unlimited",
+        business: "Unlimited",
+    },
+    {
+        feature: 'Export invoices to PDF',
+        free: true,
+        pro: true,
+        business: true,
+    },
+    {
+        feature: 'Advanced Analytics & Reports',
+        free: true,
+        pro: true,
+        business: true,
+    },
+    {
+        feature: 'API access',
+        free: false,
+        pro: true,
+        business: true,
+    },
+    {
+        feature: 'API calls per month',
+        free: "0",
+        pro: "4000",
+        business: "8000",
+    },
+    {
+        feature: 'Premium invoice templates',
+        free: false,
+        pro: true,
+        business: true,
+    },
+    {
+        feature: 'Total templates included',
+        free: "3",
+        pro: "6",
+        business: "6",
+    },
+    {
+        feature: 'Manual Invoice Reminder Emails',
+        free: false,
+        pro: true,
+        business: true,
+    },
+      {
+        feature: 'Total reminder emails per month',
+        free: "0",
+        pro: "80",
+        business: "160",
+    },
+    {
+        feature: 'Priority support',
+        free: false,
+        pro: true,
+        business: true,
+    },
+    {
+        feature: 'Recurring invoices',
+        free: false,
+        pro: false,
+        business: true,
+    },
+    {
+        feature: 'Monthly Reports & Insights',
+        free: false,
+        pro: false,
+        business: true,
+    },
+    {
+        feature: 'Automated reminder emails',
+        free: false,
+        pro: false,
+        business: true,
+    },
 ]
 
 export function FeaturesCircleBackground() {
@@ -245,5 +386,244 @@ export function FeaturesAutomatedReports() {
                 </linearGradient>
             </defs>
         </svg>
+    )
+}
+
+export default function DecorativeCircles() {
+    return (
+        <span className="absolute right-4 top-4">
+            <svg
+                width={41}
+                height={89}
+                viewBox="0 0 41 89"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <circle
+                    cx="38.9138"
+                    cy="87.4849"
+                    r="1.42021"
+                    transform="rotate(180 38.9138 87.4849)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="38.9138"
+                    cy="74.9871"
+                    r="1.42021"
+                    transform="rotate(180 38.9138 74.9871)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="38.9138"
+                    cy="62.4892"
+                    r="1.42021"
+                    transform="rotate(180 38.9138 62.4892)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="38.9138"
+                    cy="38.3457"
+                    r="1.42021"
+                    transform="rotate(180 38.9138 38.3457)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="38.9138"
+                    cy="13.634"
+                    r="1.42021"
+                    transform="rotate(180 38.9138 13.634)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="38.9138"
+                    cy="50.2754"
+                    r="1.42021"
+                    transform="rotate(180 38.9138 50.2754)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="38.9138"
+                    cy="26.1319"
+                    r="1.42021"
+                    transform="rotate(180 38.9138 26.1319)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="38.9138"
+                    cy="1.42021"
+                    r="1.42021"
+                    transform="rotate(180 38.9138 1.42021)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="26.4157"
+                    cy="87.4849"
+                    r="1.42021"
+                    transform="rotate(180 26.4157 87.4849)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="26.4157"
+                    cy="74.9871"
+                    r="1.42021"
+                    transform="rotate(180 26.4157 74.9871)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="26.4157"
+                    cy="62.4892"
+                    r="1.42021"
+                    transform="rotate(180 26.4157 62.4892)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="26.4157"
+                    cy="38.3457"
+                    r="1.42021"
+                    transform="rotate(180 26.4157 38.3457)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="26.4157"
+                    cy="13.634"
+                    r="1.42021"
+                    transform="rotate(180 26.4157 13.634)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="26.4157"
+                    cy="50.2754"
+                    r="1.42021"
+                    transform="rotate(180 26.4157 50.2754)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="26.4157"
+                    cy="26.1319"
+                    r="1.42021"
+                    transform="rotate(180 26.4157 26.1319)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="26.4157"
+                    cy="1.4202"
+                    r="1.42021"
+                    transform="rotate(180 26.4157 1.4202)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="13.9177"
+                    cy="87.4849"
+                    r="1.42021"
+                    transform="rotate(180 13.9177 87.4849)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="13.9177"
+                    cy="74.9871"
+                    r="1.42021"
+                    transform="rotate(180 13.9177 74.9871)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="13.9177"
+                    cy="62.4892"
+                    r="1.42021"
+                    transform="rotate(180 13.9177 62.4892)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="13.9177"
+                    cy="38.3457"
+                    r="1.42021"
+                    transform="rotate(180 13.9177 38.3457)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="13.9177"
+                    cy="13.634"
+                    r="1.42021"
+                    transform="rotate(180 13.9177 13.634)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="13.9177"
+                    cy="50.2754"
+                    r="1.42021"
+                    transform="rotate(180 13.9177 50.2754)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="13.9177"
+                    cy="26.1319"
+                    r="1.42021"
+                    transform="rotate(180 13.9177 26.1319)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="13.9177"
+                    cy="1.42019"
+                    r="1.42021"
+                    transform="rotate(180 13.9177 1.42019)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="1.41963"
+                    cy="87.4849"
+                    r="1.42021"
+                    transform="rotate(180 1.41963 87.4849)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="1.41963"
+                    cy="74.9871"
+                    r="1.42021"
+                    transform="rotate(180 1.41963 74.9871)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="1.41963"
+                    cy="62.4892"
+                    r="1.42021"
+                    transform="rotate(180 1.41963 62.4892)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="1.41963"
+                    cy="38.3457"
+                    r="1.42021"
+                    transform="rotate(180 1.41963 38.3457)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="1.41963"
+                    cy="13.634"
+                    r="1.42021"
+                    transform="rotate(180 1.41963 13.634)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="1.41963"
+                    cy="50.2754"
+                    r="1.42021"
+                    transform="rotate(180 1.41963 50.2754)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="1.41963"
+                    cy="26.1319"
+                    r="1.42021"
+                    transform="rotate(180 1.41963 26.1319)"
+                    fill="#3056D3"
+                />
+                <circle
+                    cx="1.41963"
+                    cy="1.4202"
+                    r="1.42021"
+                    transform="rotate(180 1.41963 1.4202)"
+                    fill="#3056D3"
+                />
+            </svg>
+        </span>
     )
 }

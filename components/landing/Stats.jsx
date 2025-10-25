@@ -3,7 +3,7 @@ import ContentWrapper from "../ContentWrapper"
 
 export default function Stats() {
     return (
-        <section className="pt-26 pb-20">
+        <section className="pt-26 pb-16">
             <ContentWrapper>
                 <img
                     src="/map.svg"
