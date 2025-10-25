@@ -188,6 +188,44 @@ export const comparatorFeatures = [
     },
 ]
 
+export const faqItems = [
+     {
+        id: 'item-1',
+        question: 'What is Invorca and how does it work?',
+        answer: 'Invorca is a secure online platform that lets you create and manage professional invoices with ease. Once you sign up, you can generate invoices, manage clients, and track payment status all in one place.',
+    },
+    {
+        id: 'item-2',
+        question: 'Can I customize my invoice templates?',
+        answer: 'Yes, Invorca allows full customization. You can edit invoice details, add your company logo, adjust colors, and set tax or discount fields to match your business needs.',
+    },
+    {
+        id: 'item-3',
+        question: 'Is my data secure on Invorca?',
+        answer: 'Yes, Invorca is built with security best practices and hosted on protected servers. While data is not end-to-end encrypted, we use secure HTTPS connections and follow strict access controls to keep your information safe.',
+    },
+    {
+        id: 'item-4',
+        question: 'Can I download or share invoices as PDFs?',
+        answer: 'Yes, you can download your invoices as PDFs or share them directly with clients using a secure link after generating them through your account.',
+    },
+    {
+        id: 'item-5',
+        question: 'Does Invorca support multiple currencies and tax rates?',
+        answer: 'Yes, Invorca supports multiple currencies and flexible tax rate settings, making it ideal for freelancers and businesses serving clients globally.',
+    },
+    {
+        id: 'item-6',
+        question: 'Can I track payment status for my invoices?',
+        answer: 'Yes, Invorca provides a dashboard where you can view all your invoices and their statuses—paid, pending, or overdue—helping you stay organized and manage payments easily.',
+    },
+    {
+        id: 'item-7',
+        question: 'Do I need an account to use Invorca?',
+        answer: 'Yes, you need to create an account to generate and manage invoices. Having an account ensures your data is stored securely and allows you to access your invoices anytime.',
+    }
+]
+
 export function FeaturesCircleBackground() {
     return (
         <svg

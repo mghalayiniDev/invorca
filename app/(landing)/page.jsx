@@ -1,4 +1,5 @@
 import Content from "@/components/landing/Content"
+import Faq from "@/components/landing/Faq"
 import Features from "@/components/landing/Features"
 import Hero from "@/components/landing/Hero"
 import Pricing from "@/components/landing/Pricing"
@@ -20,6 +21,8 @@ export default function Landing() {
             <Testimonials />
             {/* Pricing */}
             <Pricing />
+            {/* FAQ */}
+            <Faq />
         </>
     )
 }
