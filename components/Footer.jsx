@@ -8,15 +8,15 @@ import Link from "next/link"
 export default function Footer() {
     return (
         <footer className="mt-12 border-t py-16">
-            <ContentWrapper className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
+            <ContentWrapper className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 px-8 ">
                 <div className="flex flex-col gap-4">
                     <span className="w-fit">
                         <Logo />
                     </span>
-                    <p className="text-[0.865rem] text-gray-800 mt-2">
-                        Simplify your billing process with our easy-to-use platform. Create, and send invoices easily
+                    <p className="text-[0.85rem] text-gray-800 mt-2">
+                        Simplify your billing process with our easy-to-use platform. Create and send invoices easily
                     </p>
-                    <span className="text-sm font-[500]">
+                    <span className="text-[0.825rem] font-[500]">
                         © Invorca {new Date().getFullYear()}
                     </span>
                 </div>

@@ -27,10 +27,11 @@ export default function Faq() {
                         {faqItems.map((item) => (
                             <div
                                 className="group"
-                                key={item.id}>
+                                key={item.id}
+                            >
                                 <AccordionItem
                                     value={item.id}
-                                    className="border-none px-7 py-1"
+                                    className="border-none py-1"
                                 >
                                     <AccordionTrigger className="cursor-pointer hover:no-underline font-sans text-[0.95rem] font-[600]">
                                         {item.question}
@@ -39,7 +40,7 @@ export default function Faq() {
                                         <p className="text-[0.9rem] leading-[1.75] text-gray-600">{item.answer}</p>
                                     </AccordionContent>
                                 </AccordionItem>
-                                <hr className="mx-7 group-last:hidden peer-data-[state=open]:opacity-0" />
+                                <hr className="group-last:hidden peer-data-[state=open]:opacity-0" />
                             </div>
                         ))}
                     </Accordion>
