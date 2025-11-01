@@ -1,3 +1,5 @@
+"use client"
+
 import ContentWrapper from "@/components/ContentWrapper"
 import { brands } from "@/constants"
 import { ArrowRight } from "lucide-react"
@@ -8,7 +10,7 @@ export default function Hero() {
         <section
             className="pt-32 pb-18 relative"
         >
-              <svg className='absolute inset-0 -z-10 size-full max-md:hidden' width='1440' height='720' viewBox='0 0 1440 720' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <svg className='absolute inset-0 -z-10 size-full max-md:hidden' width='1440' height='720' viewBox='0 0 1440 720' fill='none' xmlns='http://www.w3.org/2000/svg'>
                 <circle cx='711.819' cy='372.562' r='308.334' stroke='var(--color-gray-200)' strokeOpacity='.9' />
                 <circle cx='782.595' cy='411.166' r='308.334' stroke='var(--color-gray-200)' strokeOpacity='.9' />
             </svg>
@@ -51,12 +53,21 @@ export default function Hero() {
                             height={15}
                         />
                     </button>
-                    <button 
+                    <Link 
                         className="text-[0.95rem] border hover:bg-neutral-100/70
                         rounded-md px-8 py-[12px] font-[600] cursor-pointer max-w-[275px] md:max-w-[175px] w-full"
+                        href="/#pricing"
+                        onClick={(e) => {
+                            e.preventDefault()
+                            const section = document.getElementById("pricing")
+                            if (section) {
+                                section.scrollIntoView({ behavior: "smooth" })
+                                window.history.pushState(null, "", "/")
+                            }
+                        }}
                     >
                         View pricing
-                    </button>
+                    </Link>
                 </div>
                 <img 
                     className="w-full h-[400px] md:h-[650px] mt-18 inset-shadow-2xs ring-background bg-background relative 

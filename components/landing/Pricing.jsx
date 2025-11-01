@@ -3,8 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Check, X } from 'lucide-react'
 import { Button } from "../ui/button"
 import Link from "next/link"
-import DecorativeCircles, { plans } from "@/constants"
+import { plans } from "@/constants"
 import Comparator from "./pricing/Comparator"
+import DecorativeCircles from "../icons/DecorativeCircles"
 
 export default function Pricing() {
     return (

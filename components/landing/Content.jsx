@@ -5,7 +5,7 @@ export default function Content() {
     return (
         <section 
             className="py-18"
-            id="#solution"    
+            id="solution"    
         >
             <ContentWrapper>
                 {/* Header */}

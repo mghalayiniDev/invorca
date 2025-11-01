@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer"
 import Content from "@/components/landing/Content"
 import Faq from "@/components/landing/Faq"
 import Features from "@/components/landing/Features"
@@ -23,6 +24,8 @@ export default function Landing() {
             <Pricing />
             {/* FAQ */}
             <Faq />
+            {/* Footer */}
+            <Footer />
         </>
     )
 }

@@ -19,32 +19,31 @@ export default function Faq() {
                     </p>
                 </div>
                 {/* Body */}
-                <div className="mx-auto mt-12 max-w-[725px]">
+                <div className="mx-auto mt-12 max-w-[825px]">
                     <Accordion
                         type="single"
                         collapsible
-                        className="bg-gray-50 w-full rounded-2xl p-1 border">
+                        className="w-full">
                         {faqItems.map((item) => (
                             <div
                                 className="group"
                                 key={item.id}>
                                 <AccordionItem
                                     value={item.id}
-                                    className="data-[state=open]:bg-card peer rounded-xl border-none
-                                    px-7 py-1 data-[state=open]:border-none data-[state=open]:shadow-sm"
+                                    className="border-none px-7 py-1"
                                 >
-                                    <AccordionTrigger className="cursor-pointer text-[0.925rem] hover:no-underline font-sans">
+                                    <AccordionTrigger className="cursor-pointer hover:no-underline font-sans text-[0.95rem] font-[600]">
                                         {item.question}
                                     </AccordionTrigger>
                                     <AccordionContent>
-                                        <p className="text-[0.9rem] leading-[1.75]">{item.answer}</p>
+                                        <p className="text-[0.9rem] leading-[1.75] text-gray-600">{item.answer}</p>
                                     </AccordionContent>
                                 </AccordionItem>
-                                <hr className="mx-7 border-dashed group-last:hidden peer-data-[state=open]:opacity-0" />
+                                <hr className="mx-7 group-last:hidden peer-data-[state=open]:opacity-0" />
                             </div>
                         ))}
                     </Accordion>
-                    <p className="mt-12 text-center text-[0.9rem] max-w-sm md:max-w-full mx-auto">
+                    <p className="mt-12 text-center text-[0.9rem] max-w-sm md:max-w-full mx-auto text-gray-800">
                         Can't find what you're looking for? Contact our{' '}
                         <Link
                             href="#"

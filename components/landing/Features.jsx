@@ -1,13 +1,16 @@
 import ContentWrapper from "../ContentWrapper"
 import { Card, CardContent } from '@/components/ui/card'
-import { FeaturesAutomatedReports, FeaturesCircleBackground, FeaturesFingerprintBackground, FeaturesInstantInvocing } from "@/constants"
 import { Shield, Users } from 'lucide-react'
+import { FeaturesCircleBackground } from "../icons/FeaturesCircleBackground"
+import { FeaturesFingerprintBackground } from "../icons/FeaturesFingerprintBackground"
+import { FeaturesInstantInvocing } from "../icons/FeaturesInstantInvocing"
+import { FeaturesAutomatedReports } from "../icons/FeaturesAutomatedReports"
 
 export default function Features() {
     return (
         <section 
             className="overflow-hidden pt-23 pb-16"
-            id="#features"    
+            id="features"    
         >
             <ContentWrapper>
                 {/* Header */}

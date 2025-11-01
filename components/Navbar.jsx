@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import ContentWrapper from "./ContentWrapper"
 import Logo from "./Logo"
@@ -9,13 +11,23 @@ export default function Navbar() {
         <nav className="py-2.5  border-b">
             <ContentWrapper className="flex items-center justify-between gap-4.5">
                 <Logo />
-                <div className="mx-auto hidden size-fit lg:block">
-                    <ul className="flex gap-6 text-sm">
+                <div className="mx-auto hidden size-fit md:block">
+                    <ul className="flex md:gap-4 lg:gap-6 text-sm">
                         {menuItems.map((item, index) => (
                             <li key={index}>
                                 <Link
                                     href={item.href}
-                                    className="text-muted-foreground hover:text-accent-foreground block duration-150">
+                                    className="text-muted-foreground hover:text-accent-foreground block duration-150 md:text-[0.8rem] lg:text-sm"
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        const id = item.href.replace("/#", "").replace("#", "")
+                                        const section = document.getElementById(id)
+                                        if (section) {
+                                            section.scrollIntoView({ behavior: "smooth" })
+                                            window.history.pushState(null, "", "/")
+                                        }
+                                    }}
+                                >
                                     <span>{item.name}</span>
                                 </Link>
                             </li>

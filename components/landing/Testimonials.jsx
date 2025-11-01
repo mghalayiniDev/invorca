@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 export default function Testimonials() {
     return (
-        <section className="py-26">
+        <section className="py-26" id="testimonials">
             <ContentWrapper>
                 {/* Header */}
                 <div className="max-w-3xl w-full mx-auto text-center flex flex-col justify-center items-center mb-20">
