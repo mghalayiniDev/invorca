@@ -4,7 +4,10 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 export default function Testimonials() {
     return (
-        <section className="py-26" id="testimonials">
+        <section 
+            className="py-26 bg-[url('/bg-with-grid.png')] bg-cover bg-no-repeat" 
+            id="testimonials"
+        >
             <ContentWrapper>
                 {/* Header */}
                 <div className="max-w-3xl w-full mx-auto text-center flex flex-col justify-center items-center mb-20">
@@ -53,7 +56,7 @@ export default function Testimonials() {
                     <Card className="md:col-span-2">
                         <CardContent className="h-full pt-6">
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p className="text-xl font-medium">Invorca has completely streamlined our billing process. Creating, sending, and tracking invoices has never been this easy"</p>
+                                <p className="text-xl font-medium">Invorca has completely streamlined our billing process. Creating, sending, and tracking invoices has never been this easy</p>
 
                                 <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                                     <Avatar className="size-12">

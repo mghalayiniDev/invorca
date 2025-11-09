@@ -8,12 +8,9 @@ import Link from "next/link"
 export default function Hero() {
     return (
         <section
-            className="pt-32 pb-18 relative"
+            className="pt-32 pb-18 relative 
+                bg-[url('/bg-with-grid.png')] bg-cover bg-center bg-no-repeat"
         >
-            <svg className='absolute inset-0 -z-10 size-full max-md:hidden' width='1440' height='720' viewBox='0 0 1440 720' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                <circle cx='711.819' cy='372.562' r='308.334' stroke='var(--color-gray-200)' strokeOpacity='.9' />
-                <circle cx='782.595' cy='411.166' r='308.334' stroke='var(--color-gray-200)' strokeOpacity='.9' />
-            </svg>
             <ContentWrapper className="overflow-hidden text-center flex flex-col">
                 <Link
                     href="/"

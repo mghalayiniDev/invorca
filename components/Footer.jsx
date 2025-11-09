@@ -4,8 +4,26 @@ import { legalItems, menuItems } from "@/constants"
 import ContentWrapper from "./ContentWrapper"
 import Logo from "./Logo"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 export default function Footer() {
+    const router = useRouter()
+
+    const handleClick = (href) => {
+        const id = href.replace("/#", "").replace("#", "")
+        router.push(`/#${id}`)
+        const scrollToSection = () => {
+            const section = document.getElementById(id)
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" })
+                window.history.replaceState(null, "", "/")
+            } else {
+                requestAnimationFrame(scrollToSection)
+            }
+        }
+        scrollToSection()
+    }
+
     return (
         <footer className="mt-12 border-t py-16">
             <ContentWrapper className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 px-8 ">
@@ -21,31 +39,22 @@ export default function Footer() {
                     </span>
                 </div>
                 <div className="flex flex-col gap-6 md:mx-auto">
-                    <span className="font-[600] text-[1.125rem]">Conetnt</span>
+                    <span className="font-[700] text-[1.125rem]">Conetnt</span>
                     <ul className="list-none flex flex-col gap-2.5">
                         {menuItems.map((item, idx) => (
                             <li key={idx} className="w-fit">
-                                <Link
-                                    href={`/${item.href}`}
-                                    className="text-[0.85rem] font-[500] text-gray-700 hover:text-black"
-                                    onClick={(e) => {
-                                        e.preventDefault()
-                                        const id = item.href.replace("/#", "").replace("#", "")
-                                        const section = document.getElementById(id)
-                                        if (section) {
-                                            section.scrollIntoView({ behavior: "smooth" })
-                                            window.history.pushState(null, "", "/")
-                                        }
-                                    }}
+                                <button
+                                    className="text-[0.85rem] font-[500] text-gray-700 hover:text-black cursor-pointer"
+                                    onClick={() => handleClick(item.href)}
                                 >
                                     {item.name}
-                                </Link>
+                                </button>
                             </li>
                         ))}
                     </ul>
                 </div>
                 <div className="flex flex-col gap-6 md:mx-auto">
-                    <span className="font-[600] text-[1.125rem]">Legal</span>
+                    <span className="font-[700] text-[1.125rem]">Legal</span>
                     <ul className="list-none flex flex-col gap-2.5">
                         {legalItems.map((item, idx) => (
                             <li key={idx} className="w-fit">

@@ -44,7 +44,7 @@ export default function Faq() {
                             </div>
                         ))}
                     </Accordion>
-                    <p className="mt-12 text-center text-[0.9rem] max-w-sm md:max-w-full mx-auto text-gray-800">
+                    <p className="mt-16 text-center text-[0.9rem] max-w-sm md:max-w-full mx-auto text-gray-800">
                         Can't find what you're looking for? Contact our{' '}
                         <Link
                             href="#"

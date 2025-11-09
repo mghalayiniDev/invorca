@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link"
 import ContentWrapper from "./ContentWrapper"
 import Logo from "./Logo"
 import { ArrowRight, Menu } from "lucide-react"
@@ -8,17 +7,16 @@ import { menuItems } from "@/constants"
 import { useEffect, useState } from "react"
 import {
     Drawer,
-    DrawerClose,
     DrawerContent,
     DrawerDescription,
-    DrawerFooter,
     DrawerHeader,
     DrawerOverlay,
-    DrawerTitle,
-    DrawerTrigger,
+    DrawerTitle
 } from "@/components/ui/drawer"
+import { useRouter } from "next/navigation"
 
 export default function Navbar() {
+    const router = useRouter()
     const [isDrawerActive, setIsDrawerActive] = useState(false)
     const [isSmallDevice, setIsSmallDevice] = useState(false)
 
@@ -26,9 +24,10 @@ export default function Navbar() {
         const handleResize = () => {
             const small = window.innerWidth < 768
             setIsSmallDevice(prev => {
-            if (prev !== small) return small
-                return prev // prevent unnecessary renders
-            })
+                if (prev !== small) return small
+                    return prev // prevent unnecessary renders
+                }
+            )
             setIsDrawerActive(prev => (small ? prev : false))
         }
         // Run once on mount
@@ -36,6 +35,21 @@ export default function Navbar() {
         window.addEventListener("resize", handleResize)
         return () => window.removeEventListener("resize", handleResize)
     }, [])
+
+    const handleClick = (href) => {
+        const id = href.replace("/#", "").replace("#", "")
+        router.push(`/#${id}`)
+        const scrollToSection = () => {
+            const section = document.getElementById(id)
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" })
+                window.history.replaceState(null, "", "/")
+            } else {
+                requestAnimationFrame(scrollToSection)
+            }
+        }
+        scrollToSection()
+    }
 
     return (
         <nav className="py-2.5 border-b">
@@ -45,21 +59,12 @@ export default function Navbar() {
                     <ul className="flex md:gap-4 lg:gap-6 text-sm">
                         {menuItems.map((item, index) => (
                             <li key={index}>
-                                <Link
-                                    href={item.href}
-                                    className="text-muted-foreground hover:text-accent-foreground block duration-150 md:text-[0.8rem] lg:text-sm"
-                                    onClick={(e) => {
-                                        e.preventDefault()
-                                        const id = item.href.replace("/#", "").replace("#", "")
-                                        const section = document.getElementById(id)
-                                        if (section) {
-                                            section.scrollIntoView({ behavior: "smooth" })
-                                            window.history.pushState(null, "", "/")
-                                        }
-                                    }}
+                                <button
+                                    className="text-muted-foreground hover:text-accent-foreground block duration-150 md:text-[0.8rem] lg:text-sm cursor-pointer"
+                                    onClick={() => handleClick(item.href)}
                                 >
                                     <span>{item.name}</span>
-                                </Link>
+                                </button>
                             </li>
                         ))}
                     </ul>
@@ -71,7 +76,7 @@ export default function Navbar() {
                         Sign in
                     </button>
                     <button 
-                        className="text-[0.725rem] md:text-[0.785rem] lg:text-[0.835rem] border border-brand-700 bg-brand-700 text-white 
+                        className="text-[0.785rem] lg:text-[0.835rem] border border-brand-700 bg-brand-700 text-white 
                         rounded-md px-5 py-[8px] font-[500] cursor-pointer flex items-center gap-3 hover:bg-brand-800"
                     >
                         <span className="lg:hidden">Get started</span>
@@ -83,7 +88,7 @@ export default function Navbar() {
                         />
                     </button>
                     <button 
-                        className="px-2 py-[8px] border bg-gray-100 rounded-md md:hidden shadow-sm hover:bg-gray-200/80 hover:shadow-md cursor-pointer"
+                        className="px-2 py-[8px] border bg-gray-50 rounded-md md:hidden hover:bg-gray-100/80 hover:shadow-sm cursor-pointer"
                         onClick={() => {
                             if (isSmallDevice) {
                                 setIsDrawerActive(true)
@@ -101,43 +106,22 @@ export default function Navbar() {
             {isSmallDevice && (
                 <Drawer open={isDrawerActive} onOpenChange={setIsDrawerActive}>
                     <DrawerOverlay className="bg-black/30 backdrop-blur-[4px]" />
-                    <DrawerContent className="py-6">   
+                    <DrawerContent className="py-10">   
                         <DrawerHeader>
                             <DrawerTitle></DrawerTitle>
-                            <DrawerDescription className="flex flex-col gap-7 mt-4.5">
+                            <DrawerDescription className="flex flex-col gap-10 mt-6">
                                 {menuItems.map((item, index) => (
                                     <span key={index}>
-                                        <Link
-                                            href={item.href}
-                                            className="text-black font-[500] text-lg hover:text-gray-800"
-                                            onClick={(e) => {
-                                                e.preventDefault()
-                                                const id = item.href.replace("/#", "").replace("#", "")
-                                                const section = document.getElementById(id)
-                                                if (section) {
-                                                    section.scrollIntoView({ behavior: "smooth" })
-                                                    window.history.pushState(null, "", "/")
-                                                }
-                                                setIsDrawerActive(false)
-                                            }}
+                                        <button
+                                            className="text-black font-[600] text-lg hover:text-gray-800 cursor-pointer"
+                                            onClick={() => {
+                                                handleClick(item.href)
+                                                setIsDrawerActive(false)}}
                                         >
                                             <span>{item.name}</span>
-                                        </Link>
+                                        </button>
                                     </span>
                                 ))}
-                                <button 
-                                    className="text-[1rem] border border-brand-700 bg-brand-700 text-white 
-                                    rounded-md px-5 py-[10px] font-[500] cursor-pointer flex items-center gap-3 hover:bg-brand-800
-                                    max-w-[200px] mx-auto w-full justify-center
-                                    "
-                                >
-                                    <span>Get started</span>
-                                    <ArrowRight 
-                                        width={15}
-                                        height={15}
-                                        className="hidden lg:block"
-                                    />
-                                </button>
                             </DrawerDescription>
                         </DrawerHeader>
                     </DrawerContent>
