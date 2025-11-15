@@ -1,4 +1,7 @@
-import { FileSpreadsheet, BellRing, BarChart3, ShieldCheck } from "lucide-react"
+import { FileSpreadsheet, BellRing, BarChart3, ShieldCheck,
+      Home, FileText, FilePlus, Repeat, Users, Key, Cpu, CreditCard, Settings, 
+      CircleUser
+ } from "lucide-react"
 
 export const menuItems = [
     { name: 'Features', href: '#features' },
@@ -198,38 +201,43 @@ export const faqItems = [
      {
         id: 'item-1',
         question: 'What is Invorca and how does it work?',
-        answer: 'Invorca is a secure online platform that lets you create and manage professional invoices with ease. Once you sign up, you can generate invoices, manage clients, and track payment status all in one place.',
+        answer: 'Invorca is a secure online platform that lets you create and manage professional invoices with ease. Once you sign up, you can generate invoices, manage clients, and track payment status all in one place',
     },
     {
         id: 'item-2',
         question: 'Can I customize my invoice templates?',
-        answer: 'Yes, Invorca allows full customization. You can edit invoice details, add your company logo, adjust colors, and set tax or discount fields to match your business needs.',
+        answer: 'Yes, Invorca allows full customization. You can edit invoice details, add your company logo, adjust colors, and set tax or discount fields to match your business needs',
     },
     {
         id: 'item-3',
         question: 'Is my data secure on Invorca?',
-        answer: 'Yes, Invorca is built with security best practices and hosted on protected servers. While data is not end-to-end encrypted, we use secure HTTPS connections and follow strict access controls to keep your information safe.',
+        answer: 'Yes, Invorca is built with security best practices and hosted on protected servers. While data is not end-to-end encrypted, we use secure HTTPS connections and follow strict access controls to keep your information safe',
     },
     {
         id: 'item-4',
         question: 'Can I download or share invoices as PDFs?',
-        answer: 'Yes, you can download your invoices as PDFs or share them directly with clients using a secure link after generating them through your account.',
+        answer: 'Yes, you can download your invoices as PDFs or share them directly with clients using a secure link after generating them through your account',
     },
     {
         id: 'item-5',
         question: 'Does Invorca support recurring invoices?',
-        answer: 'Yes, Invorca supports recurring invoices, but this feature is available only for users on the Business plan.',
+        answer: 'Yes, Invorca supports recurring invoices, but this feature is available only for users on the Business plan',
     },
     {
         id: 'item-6',
         question: 'Does Invorca support multiple currencies and tax rates?',
-        answer: 'Yes, Invorca supports multiple currencies and flexible tax rate settings, making it ideal for freelancers and businesses serving clients globally.',
+        answer: 'Yes, Invorca supports multiple currencies and flexible tax rate settings, making it ideal for freelancers and businesses serving clients globally',
     },
     {
         id: 'item-7',
         question: 'Can I track payment status for my invoices?',
-        answer: 'Yes, Invorca provides a dashboard where you can view all your invoices and their statuses—paid, pending, or overdue—helping you stay organized and manage payments easily.',
-    }
+        answer: 'Yes, Invorca provides a dashboard where you can view all your invoices and their statuses—paid, pending, or overdue—helping you stay organized and manage payments easily',
+    },
+    {
+        id: 'item-8',
+        question: 'Is Invorca free for daily use?',
+        answer: 'Invorca offers a free plan with core invoicing features. For advanced tools like recurring invoices and detailed analytics, you can upgrade to the Business plan at any time',
+    },
 ]
 
 export const termsOfService = [
@@ -433,5 +441,48 @@ export const cookiePolicy = [
         header: "Contact Information",
         description:
         "If you have any questions, feedback, or concerns regarding this Cookie Policy or how we use cookies, please reach out to us through our official contact page or support email. We will respond promptly in accordance with UAE data protection standards."
+    }
+]
+
+export const dashboardLinks = [
+    {
+        header: 'Dashboard',
+        links: [
+            { name: 'Dashboard', path: '/dashboard', icon: Home }
+        ]
+    },
+    {
+        header: 'Invoices',
+        links: [
+            { name: 'All Invoices', path: '/dashboard/invoices', icon: FileText },
+            { name: 'Create Invoice', path: '/dashboard/invoices/create', icon: FilePlus },
+            { name: 'Recurring', path: '/dashboard/invoices/recurring', icon: Repeat }
+        ]
+    },
+    {
+        header: 'Customers',
+        links: [
+            { name: 'Customers', path: '/dashboard/customers', icon: Users }
+        ]
+    },
+    {
+        header: 'API',
+        links: [
+            { name: 'Automation', path: '/dashboard/automation', icon: Cpu },
+            { name: 'API Keys', path: '/dashboard/api-keys', icon: Key }
+        ]
+    },
+    {
+        header: 'Plans',
+        links: [
+            { name: 'Upgrade', path: '/dashboard/upgrade', icon: CreditCard }
+        ]
+    },
+    {
+        header: 'Settings',
+        links: [
+            { name: 'Account', path: '/dashboard/account', icon: CircleUser },
+            { name: 'Settings', path: '/dashboard/settings', icon: Settings }
+        ]
     }
 ]

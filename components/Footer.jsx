@@ -25,9 +25,9 @@ export default function Footer() {
     }
 
     return (
-        <footer className="mt-12 border-t py-16">
+        <footer className="mt-12 border-t py-20">
             <ContentWrapper className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 px-8 ">
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-5.5">
                     <span className="w-fit">
                         <Logo />
                     </span>
@@ -40,7 +40,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col gap-6 md:mx-auto">
                     <span className="font-[700] text-[1.125rem]">Conetnt</span>
-                    <ul className="list-none flex flex-col gap-2.5">
+                    <ul className="list-none flex flex-col gap-3.5">
                         {menuItems.map((item, idx) => (
                             <li key={idx} className="w-fit">
                                 <button
@@ -55,7 +55,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col gap-6 md:mx-auto">
                     <span className="font-[700] text-[1.125rem]">Legal</span>
-                    <ul className="list-none flex flex-col gap-2.5">
+                    <ul className="list-none flex flex-col gap-3.5">
                         {legalItems.map((item, idx) => (
                             <li key={idx} className="w-fit">
                                 <Link

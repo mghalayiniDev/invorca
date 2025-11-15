@@ -51,7 +51,7 @@ export default function Hero() {
                         />
                     </button>
                     <Link 
-                        className="text-[0.95rem] border hover:bg-neutral-100/70
+                        className="text-[0.95rem] border bg-white hover:bg-neutral-100/70
                         rounded-md px-8 py-[12px] font-[600] cursor-pointer max-w-[275px] md:max-w-[175px] w-full"
                         href="/#pricing"
                         onClick={(e) => {
@@ -67,7 +67,7 @@ export default function Hero() {
                     </Link>
                 </div>
                 <img 
-                    className="w-full h-[400px] md:h-[650px] mt-18 inset-shadow-2xs ring-background bg-background relative 
+                    className="w-full h-[400px] md:h-[650px] mt-20 inset-shadow-2xs ring-background bg-background relative 
                         overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1"
                     src="/circle_un3f39.webp"
                     alt="Hero image"

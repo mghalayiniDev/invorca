@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 export default function Testimonials() {
     return (
         <section 
-            className="py-26 bg-[url('/bg-with-grid.png')] bg-cover bg-no-repeat" 
+            className="pt-26 pb-30 bg-[url('/bg-with-grid.png')] bg-cover bg-no-repeat" 
             id="testimonials"
         >
             <ContentWrapper>

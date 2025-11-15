@@ -6,7 +6,8 @@ import Link from "next/link"
 export default function Faq() {
     return (
         <section
-            className="overflow-hidden pt-10 pb-23"
+            className="overflow-hidden pt-10 pb-23 relative
+            "
         >
             <ContentWrapper>
                 {/* Header */}
@@ -44,11 +45,11 @@ export default function Faq() {
                             </div>
                         ))}
                     </Accordion>
-                    <p className="mt-16 text-center text-[0.9rem] max-w-sm md:max-w-full mx-auto text-gray-800">
+                    <p className="mt-16 text-center text-[0.9rem] max-w-sm md:max-w-full mx-auto text-gray-800 font-[500]">
                         Can't find what you're looking for? Contact our{' '}
                         <Link
                             href="#"
-                            className="text-primary font-[600] hover:underline">
+                            className="text-primary font-[700] hover:underline">
                             customer support team
                         </Link>
                     </p>

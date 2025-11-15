@@ -25,12 +25,11 @@ export default function Navbar() {
             const small = window.innerWidth < 768
             setIsSmallDevice(prev => {
                 if (prev !== small) return small
-                    return prev // prevent unnecessary renders
+                    return prev 
                 }
             )
             setIsDrawerActive(prev => (small ? prev : false))
         }
-        // Run once on mount
         handleResize()
         window.addEventListener("resize", handleResize)
         return () => window.removeEventListener("resize", handleResize)
